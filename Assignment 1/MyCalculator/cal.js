@@ -1,4 +1,4 @@
-function runCalculator(){
+function Calculator(){
     var ch=0;
     promptMenu();
     function promptMenu(){
