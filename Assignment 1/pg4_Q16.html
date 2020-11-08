@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function checkPalindrome(string) {
+
+
+var arrayValues = string.split('');
+
+var reverseArrayValues = arrayValues.reverse();
+
+
+var reverseString = reverseArrayValues.join('');
+
+if(string == reverseString) {
+    console.log('It is a palindrome');
+}
+else {
+    console.log('It is not a palindrome');
+}
+}
+
+
+var string = prompt('Enter a string: ');
+
+checkPalindrome(string);
+            
+        </script>
+    </body>
+</html>

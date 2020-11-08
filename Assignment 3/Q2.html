@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h2>Rectangle</h2>
+        <script>
+        class Rectangle{
+            constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+        }
+        var obj = new Rectangle(3, 5);
+obj.height; 
+obj.width;
+Rectangle.prototype.getArea=function(){
+    return this.width*this.height;
+}
+document.write(obj.getArea());
+
+
+            
+        </script>
+    </body>
+</html>

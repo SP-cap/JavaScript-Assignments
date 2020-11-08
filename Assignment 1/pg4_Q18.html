@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+             function perfectNum(l ,r ){
+    var number = Math.ceil(Math.sqrt(l)); 
+  
+  
+  var n2 = number * number; 
+
+  
+  number = (number * 2) + 1; 
+
+ 
+   
+  while ((n2 >= l && n2 <= r)) 
+  { 
+
+     
+      console.log(n2 + " "); 
+
+     
+      n2 = n2 + number; 
+
+      
+      number += 2; 
+  } 
+} 
+perfectNum(2 , 450);
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h2>Composed Value</h2>
+        <form>
+            <input type="text" id="input" placeholder="Enter the array">
+            <br><br>
+            <input type="button" value="Calculate" id="btn" onclick="find(x=document.getElementById('input').value,isEven)";return false">
+        </form>
+        <script>
+          function find(x=document.getElementById("input").value,isEven){
+    var a=x.split(",");
+    for(var i=0;i<a.length;i++){
+        if(isEven(a[i])){
+            alert(a[i]);
+            break;
+        }
+        else{
+            alert("No even number");
+        }
+    }
+}
+
+function isEven(x){
+    return((x%2==0));
+}  
+           
+  
+        </script>
+    </body>
+</html>

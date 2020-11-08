@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<script>
+    function Max(){
+       var numbers = ["1","4","3"];
+   var arr = numbers.toString().split("");
+   var largest = arr[0];
+   for(var i = 1; i < arr.length; i++) {
+      if(+arr[i] > largest) {
+         largest = arr[i];
+      }
+   }
+
+   console.log(largest);
+ }
+ Max();
+</script>
+    </head>
+    <body>
+        
+    </body>
+</html>

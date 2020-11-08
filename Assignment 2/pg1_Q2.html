@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h2>Composed Value</h2>
+        <form>
+            <input type="number" id="input1" placeholder="Enter the number">
+            <br><br>
+            <input type="button" value="Calculate" id="btn" onclick="compose(square,double,x= document.getElementById('input1').value);return false">
+        </form> 
+        <script>
+            
+                
+ 
+
+  function compose(square,double,x= document.getElementById("input1").value){  
+    console.log(square(double(x)));
+console.log(double(square(x))); 
+  }
+function double(x){
+    return x*2;
+}
+function square(x){
+    return x*x;
+}
+
+                
+
+
+
+
+            
+        
+        </script>
+    </body>
+</html>

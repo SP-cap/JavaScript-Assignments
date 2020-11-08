@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function selectionSort(arr){
+  var minIdx, temp, 
+      len = arr.length;
+  for(var i = 0; i < len; i++){
+    minIdx = i;
+    for(var  j = i+1; j<len; j++){
+       if(arr[j]<arr[minIdx]){
+          minIdx = j;
+       }
+    }
+    temp = arr[i];
+    arr[i] = arr[minIdx];
+    arr[minIdx] = temp;
+  }
+  console.log(arr);
+}
+selectionSort([4,3,8,5,9,1]);
+
+function insertionSort(inputArr) {
+    let n = inputArr.length;
+        for (let i = 1; i < n; i++) {
+            // Choosing the first element in our unsorted subarray
+            let current = inputArr[i];
+            // The last element of our sorted subarray
+            let j = i-1; 
+            while ((j > -1) && (current < inputArr[j])) {
+                inputArr[j+1] = inputArr[j];
+                j--;
+            }
+            inputArr[j+1] = current;
+        }
+    console.log(inputArr);
+}
+
+insertionSort([4,3,8,5,9,1]);
+
+
+var items = [5,3,7,6,2,9];
+function swap(items, leftIndex, rightIndex){
+    var temp = items[leftIndex];
+    items[leftIndex] = items[rightIndex];
+    items[rightIndex] = temp;
+}
+function partition(items, left, right) {
+    var pivot   = items[Math.floor((right + left) / 2)], 
+        i       = left, 
+        j       = right; 
+    while (i <= j) {
+        while (items[i] < pivot) {
+            i++;
+        }
+        while (items[j] > pivot) {
+            j--;
+        }
+        if (i <= j) {
+            swap(items, i, j); 
+            i++;
+            j--;
+        }
+    }
+    return i;
+}
+function quickSort(items, left, right) {
+    var index;
+    if (items.length > 1) {
+        index = partition(items, left, right); 
+        if (left < index - 1) { 
+            quickSort(items, left, index - 1);
+        }
+        if (index < right) { 
+            quickSort(items, index, right);
+        }
+    }
+    return items;
+}
+
+var sortedArray = quickSort(items, 0, items.length - 1);
+console.log(sortedArray);
+
+        
+        </script>
+    </body>
+</html>

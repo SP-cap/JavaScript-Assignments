@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h2>Find using Recursion</h2>
+       <p id="p"></p>
+        <script>
+            var l=0;
+           function find(a,isEven){
+               if(l<a.length){
+    if(isEven(a[l])){
+        return(a[l]);
+    }
+    else{
+        ++l;
+        return find(a,isEven);
+    }
+   
+           }
+           }
+           
+function isEven(x){
+    return((x%2==0));
+}  
+var a=[1,3,5,2,7];
+document.getElementById('p').innerHTML = "The first occured even number is: "+find(a,isEven);
+           
+   
+        </script>  
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+       <table id="tbl" style="border: 1px solid black; width: 400px;height: 400px;">
+           
+       </table> 
+       <script>
+    
+
+            function createTable()
+{
+row = prompt("Input number of rows", );
+col = prompt("Input number of columns",);
+console.log(row);
+console.log(col);
+  
+ for(var r=0;r< row ;r++)
+  {
+   var x=document.getElementById('tbl').insertRow(r);
+   for(var c=0;c< col;c++)  
+    {
+     var y=  x.insertCell(c);
+     y.innerHTML="Row"+r+" Column"+c; 
+    }
+   }
+
+}
+createTable();
+           
+       </script>
+    </body>
+</html>

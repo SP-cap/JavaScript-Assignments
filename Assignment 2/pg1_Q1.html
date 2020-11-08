@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h2>Composed Value</h2>
+        <form>
+            <input type="text" id="input" placeholder="Enter the array">
+            <br><br>
+            <input type="button" value="Calculate" id="btn" onclick="find(x=document.getElementById('input').value,square,squarert);return false">
+        </form>
+        <script>
+            
+            function find(x=document.getElementById("input").value,square,squarert){
+    var a=x.split(",");
+    var output=[];
+    var output2=[];
+    for(var i=0;i<a.length;i++){
+        output.push(square(a[i]));
+        
+    }
+    alert(output);
+    for(var i=0;i<a.length;i++){
+        output2.push(squarert(a[i]));
+        
+    }
+    alert(output2);
+}
+
+function square(y){
+    return y*y;
+}   
+function squarert(y){
+    return Math.sqrt(y);
+}
+ 
+        </script>
+    </body>
+</html>

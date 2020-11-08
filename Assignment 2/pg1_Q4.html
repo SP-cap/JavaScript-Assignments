@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h2>Composed Value</h2>
+        <form>
+            <input type="number" id="input" placeholder="Enter the array">
+            <br><br>
+            <input type="button" value="Calculate" id="btn" onclick="composedValue(square,double,x= document.getElementById('input').value);return false">
+        </form>
+        <script>
+            
+           
+  function composedValue(square,double,x= document.getElementById("input1").value){  
+    console.log(square(double(x)));
+
+  }
+function double(x){
+    return x*2;
+}
+function square(x){
+    return x*x;
+}
+
+        </script>
+    </body>
+</html>

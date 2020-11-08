@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form name="formNam" action="">
+            <input type="text" placeholder="Celsius" id="cel" name="celnam">
+        <br><br>
+        <p id="enter"></p>
+        <br><br>
+            <input onclick="converter()"  type="button" name="Convert" id="but" value="Convert">
+        <br><br>
+            <input type="number" id="far" placeholder="Fahrenhite" name="farnam">
+        </form>
+        <script>
+            function converter(){
+                var Cel = document.getElementById('cel').value;
+                var Far = (Cel - 32) * 5/9;
+               document.getElementById('far').value = Far;
+            
+            
+  var x = document.forms["formNam"]["celnam"].value;
+  if (x == "") {
+    alert("Number must be filled out");
+    return false;
+  }
+  if(isNaN(x)){
+      alert("Only numbers allowed");
+  }
+}
+                     
+              
+            
+        </script>
+    </body>
+</html>
